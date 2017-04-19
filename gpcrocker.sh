@@ -2,7 +2,17 @@
 
 source ~/scripts/src_dir_pull.sh
 
-export conf='~/scripts/gpcrocker.sh'
+alias oracle='say $(fortune)'
+
+alias ls='ls --color=auto'
+function c() {
+     if [ -d "$1" ]
+     then
+        cd $1
+        ls
+     fi
+}
+export conf='/Users/grahamcrocker/scripts/gpcrocker.sh'
 alias recache='magerun index:reindex:all && magerun cache:flush'
 alias cf=recache
 alias ...="pushd ../../"
